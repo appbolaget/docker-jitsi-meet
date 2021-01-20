@@ -15,6 +15,10 @@ RUN \
 	apt-cleanup && \
 	rm -rf /tmp/pkg /var/cache/apt
 
+# Author: Appbolaget
+COPY appbolaget/config.js /appbolaget/
+COPY appbolaget/interface_config.js /appbolaget/
+
 EXPOSE 80 443
 
 VOLUME ["/config", "/usr/share/jitsi-meet/transcripts"]

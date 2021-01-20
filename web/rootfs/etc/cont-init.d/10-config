@@ -94,3 +94,14 @@ if [[ ! -f /config/interface_config.js ]]; then
             /config/interface_config.js
     fi
 fi
+
+# Author: Appbolaget
+# If config.js or interface_config.js exists in /appbolaget/, then override
+# the configs in /config/
+if [[ -f /appbolaget/config.js ]]; then
+    cp /appbolaget/config.js /config/config.js
+fi
+
+if [[ -f /appbolaget/interface_config.js ]]; then
+    cp /appbolaget/interface_config.js /config/interface_config.js
+fi
